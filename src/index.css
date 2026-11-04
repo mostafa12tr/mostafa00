@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-main: #0B1118;
+    --card-bg: #121D29;
+    --accent-primary: #20D6C2;
+    --accent-warning: #FFB454;
+    --text-main: #F4F7FA;
+  }
+
+  body {
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  [dir="rtl"] {
+    font-family: 'Tajawal', 'Cairo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    letter-spacing: 0 !important;
+  }
+
+  [dir="rtl"] * {
+    letter-spacing: normal !important;
+  }
+
+  [dir="rtl"] .font-mono:not(code):not(pre) {
+    font-family: 'Tajawal', sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'Fira Code', monospace;
+  }
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0B1118;
+}
+::-webkit-scrollbar-thumb {
+  background: #1c2b3d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #20D6C2;
+}
+
+/* Cybersecurity cyber grid background */
+.cyber-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(32, 214, 194, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(32, 214, 194, 0.04) 1px, transparent 1px);
+}
+
+.radar-sweep {
+  background: conic-gradient(from 0deg at 50% 50%, rgba(32, 214, 194, 0.12) 0deg, rgba(32, 214, 194, 0) 60deg, transparent 360deg);
+  animation: radar-rotate 8s linear infinite;
+}
+
+@keyframes radar-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}

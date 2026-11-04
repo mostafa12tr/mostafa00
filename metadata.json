@@ -1,0 +1,6 @@
+{
+  "name": "MITM Attack Academic Presentation",
+  "description": "Interactive, university-grade cybersecurity presentation on Man-in-the-Middle (MITM) attacks with live visual simulations, real-world scenarios, and bilingual support.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
